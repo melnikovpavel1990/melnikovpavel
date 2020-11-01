@@ -52,10 +52,9 @@ echo $max;
 //5. Посчитать количество строчных и прописных букв в строке
 
 $text = "b cvx F vccvb A";
-
 $little = 0;
 $big = 0;
-for ($i = 0; $i < 15; $i++)
+for ($i = 0; $i < strlen($text); $i++)
     if ($text[$i] >= 'a' and $text[$i] <= 'z') {
         $little++;
     } elseif
