@@ -14,8 +14,12 @@
                     BASE_PATH . '/../images/' . $_FILES['page_img']['name']);
             }
         }
-        $title = 'title';
-        $sql = "INSERT INTO pages (`title`, `content`, `author`, `category`, `img`)
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $author = $_POST['author'];
+        $category = $_POST['category'];
+        $imgUrl = $_FILES['img']['name'];
+        $sql = "INSERT INTO pages (`title`, `content`, `author`, `category`, `imgUrl`)
         VALUES (?, ?, ?, ?, ?)
         ";
         $stmt = mysqli_prepare($connection, $sql);
