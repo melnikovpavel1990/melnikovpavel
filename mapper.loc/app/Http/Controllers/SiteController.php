@@ -9,9 +9,12 @@ class SiteController extends Controller
 {
     public function index(){
 
-        $user11 = [1,2,4,5];
+        $user11 = "Pavel Melnikov";
         return view('welcome', [
             'user' => $user11
         ]);
+    }
+    public function test(){
+        return view('site.test');
     }
 }
